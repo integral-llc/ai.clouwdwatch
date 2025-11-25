@@ -9,8 +9,10 @@ An AI-powered CloudWatch log analyzer with autonomous tool calling, built with N
 
 ## ✨ Features
 
+- **🔐 Built-in AWS Credentials Manager**: Input and validate AWS credentials directly from the UI
 - **🤖 AI Tool Calling**: GPT-4 autonomously uses tools to query CloudWatch (Vercel AI SDK v5)
 - **☁️ Real AWS CloudWatch Integration**: Direct connection to your AWS CloudWatch Logs
+- **📊 Connection Status Bar**: Real-time AWS connection status with account number display
 - **🧠 Schema Discovery**: AI automatically discovers log structure before querying
 - **🔄 Streaming Responses**: Real-time Server-Sent Events (SSE) shows AI thinking live
 - **🛠️ Multi-Step Reasoning**: AI chains multiple tools (list → sample → analyze → query)
@@ -41,9 +43,9 @@ An AI-powered CloudWatch log analyzer with autonomous tool calling, built with N
 npm install
 ```
 
-### 2. Configure AWS Credentials
+### 2. Configure Credentials
 
-**Configuration Required:**
+**OpenAI API Key (Required):**
 
 Create `.env.local` file:
 
@@ -56,15 +58,25 @@ Edit `.env.local`:
 ```env
 # REQUIRED - OpenAI for AI reasoning
 OPENAI_API_KEY=sk-your-openai-api-key-here
+```
 
-# REQUIRED - AWS CloudWatch access
+**AWS Credentials (Two Options):**
+
+**Option A: UI Input (Recommended)**
+- Run the app and click the "AWS Credentials" button in the header
+- Paste your AWS credentials in export format
+- The app validates and stores them in your browser
+
+See [AWS_CREDENTIALS.md](./AWS_CREDENTIALS.md) for detailed instructions.
+
+**Option B: Environment Variables**
+Add to `.env.local`:
+```env
 AWS_ACCESS_KEY_ID=AKIA...
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_REGION=us-east-1
 AWS_LOG_GROUP_NAME=/aws/lambda/your-function
 ```
-
-**Both OpenAI and AWS credentials are required for the application to work.**
 
 ### 3. Run Development Server
 
