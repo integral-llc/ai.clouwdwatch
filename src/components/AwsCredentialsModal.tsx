@@ -83,7 +83,7 @@ export function AwsCredentialsModal({ open, onOpenChange, onCredentialsSubmit }:
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl">
+      <DialogContent className="sm:max-w-[800px]">
         <DialogHeader>
           <DialogTitle>AWS Credentials</DialogTitle>
           <DialogDescription>
