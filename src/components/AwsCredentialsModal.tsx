@@ -94,8 +94,8 @@ export function AwsCredentialsModal({ open, onOpenChange, onCredentialsSubmit }:
         <div className="space-y-4">
           <div>
             <Textarea
-              placeholder={`export AWS_ACCESS_KEY_ID="ASIA6RQ3WEUGUPFHXSY3"
-export AWS_SECRET_ACCESS_KEY="Ccg7KFdVgYJsQVSwh5BNMBaae1GDvxyWqsETareH"
+              placeholder={`export AWS_ACCESS_KEY_ID="ASIA6RQ3W....."
+export AWS_SECRET_ACCESS_KEY="Ccg7KFdVgYJsQVSwh...."
 export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2..."
 export AWS_REGION="us-east-1"`}
               value={input}
